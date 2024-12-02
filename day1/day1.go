@@ -29,6 +29,7 @@ func CalculateSimilarityScore(arr1, arr2 []int) int {
 	similarityMap := make(map[int]int)
 	similarityScore := 0
 
+	// The initial thought was to do it in a nested loop which is On². Instead this creates a hash map incrementing additional occurences and has O3n
 	for n := range len(arr1) {
 		currentArr1 := arr1[n]
 
