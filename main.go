@@ -20,12 +20,9 @@ func main() {
 	dat, err := os.ReadFile("./day1/day1_input.txt")
 	check(err)
 	splitInput := strings.Fields(string(dat))
-	fmt.Println(splitInput[1])
-	fmt.Println(len(splitInput))
 
 	arr1 := []int{}
 	arr2 := []int{}
-	fmt.Println(1 % 2)
 	for n := range len(splitInput) {
 		value, err := strconv.Atoi(splitInput[n])
 		if err != nil {
@@ -38,5 +35,6 @@ func main() {
 		}
 	}
 
-	fmt.Println(day1.CalculateCumulativeDifference(arr1, arr2))
+	fmt.Println("Cumulative difference is: ", day1.CalculateCumulativeDifference(arr1, arr2))
+	fmt.Println("Cumulative similarity score is: ", day1.CalculateSimilarityScore(arr1, arr2))
 }

@@ -26,3 +26,13 @@ func TestCalculateCumulativeDifference(t *testing.T) {
 		t.Fatalf("Wanted 9 got %v", result)
 	}
 }
+
+func TestCalculateSimilarityScore(t *testing.T) {
+	arr1 := []int{2, 1, 4, 8}
+	arr2 := []int{2, 2, 7, 8}
+	result := CalculateSimilarityScore(arr1, arr2)
+
+	if result != 12 {
+		t.Fatalf("Wanted 12 got %v", result)
+	}
+}
